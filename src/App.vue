@@ -1,5 +1,9 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld2 from './components/HelloWorld2.vue'
+import VBindImage from './components/VBindImage.vue'
+import TypeWriters from './components/TypeWriters.vue'
+import RollingDies from './components/RollingDies.vue'
 </script>
 
 <template>
@@ -10,7 +14,11 @@ import HelloWorld from './components/HelloWorld.vue'
       <a href="https://vuejs.org/" target="_blank" class="inline-block">
         <img src="./assets/vue.svg" class="logo vue filter transition duration-300" alt="Vue logo" />
       </a>
-      <HelloWorld msg="Vite + Vues" class="mt-8" />
+      <hello-world msg="Vite + Vues" />
+      <hello-world-2  class="mt-8" />
+      <v-bind-image  class="mt-20" />
+      <type-writers />
+      <rolling-dies />
     </div>
 </template>
 
