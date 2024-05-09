@@ -23,6 +23,7 @@ import RollingDies from './components/RollingDies.vue'
     <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-three'"> BgCol</label>
     <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-four'"> APISim</label>
     <label><input type="radio" name="rbgComp" v-model="compName" :value="'type-writers'"> TypeWriter</label>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'rolling-dies'"> TransitionG</label>
     <KeepAlive :max="2">
       <component :is="compName"></component>
     </KeepAlive>
