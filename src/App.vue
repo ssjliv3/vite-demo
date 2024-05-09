@@ -6,7 +6,27 @@ import TypeWriters from './components/TypeWriters.vue'
 import RollingDies from './components/RollingDies.vue'
 </script>
 
+<script>
+  export default {
+    data () {
+      return {
+        compName: 'comp-one'
+      }
+    }
+  }
+</script>
+
 <template>
+  <div>
+    <h1>Dynamic Components</h1>
+    <p>With &lt;KeepAlive :max="2"&gt; only the last two visited components will remember the user input.</p>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-one'"> One</label>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-two'"> Two</label>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-three'"> Three</label>
+    <KeepAlive :max="2">
+      <component :is="compName"></component>
+    </KeepAlive>
+  </div>
   <div class="text-center">
       <a href="https://vitejs.dev" target="_blank" class="inline-block">
         <img src="/vite.svg" class="logo filter transition duration-300" alt="Vite logo" />
@@ -15,7 +35,6 @@ import RollingDies from './components/RollingDies.vue'
         <img src="./assets/vue.svg" class="logo vue filter transition duration-300" alt="Vue logo" />
       </a>
       <hello-world msg="Vite + Vues" />
-      <hello-world-2  class="mt-8" />
       <v-bind-image  class="mt-20" />
       <type-writers />
       <rolling-dies />
@@ -33,4 +52,27 @@ import RollingDies from './components/RollingDies.vue'
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+#app {
+    width: 350px;
+    margin: 10px;
+  }
+  #app > div {
+    border: solid black 2px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .component-style {
+  display: flex; /* Ensuring components are displayed inline */
+  align-items: center; /* Align items vertically */
+  }
+  h2 {
+    text-decoration: underline;
+  }
+  label {
+    display: inline-block;
+    padding: 5px;
+  }
+  label:hover {
+    cursor: pointer;
+  }
 </style>

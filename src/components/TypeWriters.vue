@@ -7,9 +7,6 @@
         <button @click="remove" class="mt-2 mr-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Remove one
         </button>
-        <button @click="reset" class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Reset
-        </button>
 
         <p class="italic mt-2">"{{ storageComment }}"</p>
     </div>
@@ -24,10 +21,6 @@ function remove() {
     if (typeWriters.value > 0) {
         typeWriters.value--;
     }
-}
-
-function reset() {
-    typeWriters.value = 10;
 }
 
 const storageComment = computed(() => {
