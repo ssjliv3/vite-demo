@@ -1,8 +1,8 @@
 <template>
   <h3>The &lt;TransitionGroup&gt; Component</h3>
   <p>New products are given animations using the &lt;TransitionGroup&gt; component.</p>
-  <button @click="addDie">Roll</button>
-  <button @click="removeDie">Remove random</button><br>
+  <button @click="addDie" class= "mt-2 mr-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Roll</button>
+  <button @click="removeDie" class= "mt-2 mr-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Remove random</button><br>
   <TransitionGroup>
     <div v-for="x in dice" :key="x" class="diceDiv" :style="{ backgroundColor: 'hsl('+x*40+',85%,85%)' }">
       {{ x }}

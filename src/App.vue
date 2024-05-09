@@ -1,7 +1,5 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import VBindImage from './components/VBindImage.vue'
-import RollingDies from './components/RollingDies.vue'
 </script>
 
 <script>
