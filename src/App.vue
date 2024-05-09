@@ -1,8 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import HelloWorld2 from './components/HelloWorld2.vue'
 import VBindImage from './components/VBindImage.vue'
-import TypeWriters from './components/TypeWriters.vue'
 import RollingDies from './components/RollingDies.vue'
 </script>
 
@@ -20,9 +18,11 @@ import RollingDies from './components/RollingDies.vue'
   <div>
     <h1>Dynamic Components</h1>
     <p>With &lt;KeepAlive :max="2"&gt; only the last two visited components will remember the user input.</p>
-    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-one'"> One</label>
-    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-two'"> Two</label>
-    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-three'"> Three</label>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-one'"> Radio</label>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-two'"> VModel</label>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-three'"> BgCol</label>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'comp-four'"> APISim</label>
+    <label><input type="radio" name="rbgComp" v-model="compName" :value="'type-writers'"> TypeWriter</label>
     <KeepAlive :max="2">
       <component :is="compName"></component>
     </KeepAlive>
@@ -35,9 +35,6 @@ import RollingDies from './components/RollingDies.vue'
         <img src="./assets/vue.svg" class="logo vue filter transition duration-300" alt="Vue logo" />
       </a>
       <hello-world msg="Vite + Vues" />
-      <v-bind-image  class="mt-20" />
-      <type-writers />
-      <rolling-dies />
     </div>
 </template>
 
